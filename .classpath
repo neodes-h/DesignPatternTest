@@ -6,5 +6,6 @@
 	<classpathentry kind="src" path="Adapter"/>
 	<classpathentry kind="src" path="Iterator"/>
 	<classpathentry kind="src" path="TemplateMethod"/>
+	<classpathentry kind="src" path="Singleton"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
