@@ -1,29 +1,29 @@
 package idcard;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashMap;
+import java.util.Map;
 
 import framework.Factory;
 import framework.Product;
 
 public class IDCardFactory extends Factory {
 	
-	private List<String> owners = new ArrayList<>();
+	private Map<Integer, String> owners = new HashMap<>();
 	
 
 	@Override
 	protected Product createProduct(String owner) {
-		return new IDCard(owner);
+		return new IDCard(owner, owners.size());
 	}
 
 	@Override
 	protected void registerProduct(Product product) {
-		owners.add(((IDCard)(product)).getOwner());
-
+		owners.put(((IDCard)product).getNumber(), ((IDCard)product).getOwner());
 	}
 	
-	public List<String> getOwners(){
+	public Map<Integer, String> getOwners(){
 		return owners;
 	}
+	
 
 }
