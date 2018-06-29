@@ -7,14 +7,14 @@ public class Director {
 	}
 	
 	public void construct() {
-		builder.makeTitle("Title");
-		builder.makeString("This is the String");
-		builder.makeItems(new String[] {
+		builder.buildTitle("Title");
+		builder.buildString("This is the String");
+		builder.buildItems(new String[] {
 				"Morning",
 				"Afternoon",
 				"Evening"
 		});
 		
-		builder.close();
+		builder.buildClose();
 	}
 }
