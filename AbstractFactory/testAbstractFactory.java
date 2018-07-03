@@ -7,13 +7,13 @@ public class testAbstractFactory {
 	public static void main(String[] args) {
 //		Factory factory = Factory.getFactory("listfactory.ListFactory");
 		Factory factory = Factory.getFactory("tablefactory.TableFactory");
-		Link people = factory.createLink("Newspaper 1","www.people.com.cn");
-		Link gmw = factory.createLink("Newspaper 2", "www.gmw.cn");
+		Link people = factory.createLink("Newspaper 1","http://www.people.com.cn");
+		Link gmw = factory.createLink("Newspaper 2", "http://www.gmw.cn");
 		
-		Link us_yahoo = factory.createLink("Yahoo!", "www.yahoo.com");
-		Link jp_yahoo = factory.createLink("Yahoo! Japan", "www.yahoo.co.jp");
-		Link excite = factory.createLink("Excite", "www.excite.com");
-		Link google = factory.createLink("Google!", "www.google.com");
+		Link us_yahoo = factory.createLink("Yahoo!", "http://www.yahoo.com");
+		Link jp_yahoo = factory.createLink("Yahoo! Japan", "http://www.yahoo.co.jp");
+		Link excite = factory.createLink("Excite", "http://www.excite.com");
+		Link google = factory.createLink("Google!", "http://www.google.com");
 		
 		
 		Tray traynews = factory.createTray("News");
@@ -33,5 +33,7 @@ public class testAbstractFactory {
 		page.add(traynews);
 		page.add(traysearch);
 		page.output();
+		
+		factory.createYahooPage();
 	}
 }

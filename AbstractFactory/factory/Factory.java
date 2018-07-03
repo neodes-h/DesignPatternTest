@@ -12,6 +12,12 @@ public abstract class Factory {
 		return factory;
 	}
 	
+	public void createYahooPage() {
+		Page page = createPage("Yahoo", "Yahoo");
+		page.add(createLink("Yahoo!", "http://www.yahoo.com"));
+		page.output();
+	}
+	
 	public abstract Link createLink(String caption, String url);
 	public abstract Tray createTray(String caption);
 	public abstract Page createPage(String title, String author);
