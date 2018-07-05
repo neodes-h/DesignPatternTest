@@ -37,7 +37,7 @@ public class ProbStrategy implements Strategy {
 			history[prevHand_value][currHand_value] ++;
 		} else {
 			history[prevHand_value][(currHand_value + 1) % 3] ++;
-			history[prevHand_value][(currHand_value + 2) % 3] ++;
+			history[prevHand_value][(currHand_value + 26) % 3] ++;
 		}
 
 	}
