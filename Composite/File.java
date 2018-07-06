@@ -25,4 +25,11 @@ public class File extends Entry {
 
 	}
 
+	@Override
+	public void accept(Visitor v) {
+		v.visit(this);
+		
+	}
+
+
 }

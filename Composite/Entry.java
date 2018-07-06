@@ -1,5 +1,6 @@
+import java.util.Iterator;
 
-public abstract class Entry {
+public abstract class Entry implements Element{
 	private Entry parent;
 	public abstract String getName();
 	public abstract int getSize();
@@ -32,5 +33,11 @@ public abstract class Entry {
 			return getParent().getAbsolutePath() + "/" + getName();
 		}
 	}
+	
+	public Iterator iterator() throws FileTreatmentException{
+		throw new FileTreatmentException();
+	}
+	
+
 	
 }

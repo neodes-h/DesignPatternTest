@@ -10,5 +10,10 @@
 	<classpathentry kind="src" path="Prototype"/>
 	<classpathentry kind="src" path="Builder"/>
 	<classpathentry kind="src" path="AbstractFactory"/>
+	<classpathentry kind="src" path="Bridge"/>
+	<classpathentry kind="src" path="Strategy"/>
+	<classpathentry kind="src" path="Composite"/>
+	<classpathentry kind="src" path="Decorator"/>
+	<classpathentry kind="src" path="Visitor"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

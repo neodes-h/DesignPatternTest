@@ -1,5 +1,5 @@
 
-public class BookShelfIterator implements Iterator {
+public class BookShelfIterator implements MyIterator {
 	
 	private BookShelf bookShelf;
 	private int index;

@@ -1,3 +1,4 @@
+import java.util.Iterator;
 
 public class testComposite {
 	public static void main(String[] args) {
@@ -13,6 +14,7 @@ public class testComposite {
 		bin.add(new File("latex",20000));
 		root.printList();
 		
+		
 		System.out.println("Making usr directory");
 		Directory yuki = new Directory("yuku");
 		Directory hanako = new Directory("hanako");
@@ -21,7 +23,7 @@ public class testComposite {
 		yuki.add(new File("diary.html", 100));
 		yuki.add(new File("Composite.java", 200));
 		
-		hanako.add(new File("memo.tex", 300));
+		hanako.add(new File("memo.html", 300));
 		
 		tomura.add(new File("game.doc", 400));
 		tomura.add(new File("junk.mail", 500));
@@ -34,5 +36,12 @@ public class testComposite {
 		System.out.println(tomura.getAbsolutePath());
 		
 		root.printList();
+		System.out.println("HTML files are:");
+		FileFindVistor visitor = new FileFindVistor(".html");
+		root.accept(visitor);
+		Iterator<File> it = visitor.getFoundFiles();
+		while(it.hasNext()) {
+			System.out.println(((File)it.next()).toString());
+		}
 	}
 }

@@ -1,4 +1,4 @@
 
 public interface Aggregate {
-	public abstract Iterator iterator();
+	public abstract MyIterator iterator();
 }
