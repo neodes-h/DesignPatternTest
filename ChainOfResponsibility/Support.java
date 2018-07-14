@@ -13,12 +13,19 @@ public abstract class Support {
 	}
 	
 	public final void support(Trouble trouble) {
-		if(resolve(trouble)) {
-			done(trouble);
-		} else if (next != null) {
-			next.support(trouble);
-		} else {
-			fail(trouble);
+		Support cur = this;
+		while(true) {
+			if(cur.resolve(trouble)) {
+				cur.done(trouble);
+				break;
+			} else {
+				if(cur.next != null)
+					cur = cur.next;
+				else {
+					cur.fail(trouble);
+					break;
+				}
+			}
 		}
 	}
 	
