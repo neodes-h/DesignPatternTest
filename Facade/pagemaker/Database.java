@@ -10,7 +10,7 @@ public class Database {
 		
 	}
 	
-	public static Properties getProperties(String dbname) throws FileNotFoundException, IOException {
+	protected static Properties getProperties(String dbname) throws FileNotFoundException, IOException {
 		String filename = dbname + ".txt";
 		Properties prop = new Properties();
 		prop.load(new FileInputStream(filename));

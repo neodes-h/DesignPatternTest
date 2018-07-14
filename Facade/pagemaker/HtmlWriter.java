@@ -5,11 +5,11 @@ import java.io.Writer;
 
 public class HtmlWriter {
 	private Writer writer;
-	public HtmlWriter(Writer writer) {
+	protected HtmlWriter(Writer writer) {
 		this.writer = writer;
 	}
 	
-	public void title(String title) throws IOException {
+	protected void title(String title) throws IOException {
 		writer.write("<html>");
 		writer.write("<head>");
 		writer.write("<title>" + title + "</title>");
@@ -18,19 +18,19 @@ public class HtmlWriter {
 		writer.write("<h1>" + title + "</h1>");
 	}
 	
-	public void paragraph(String msg) throws IOException{
+	protected void paragraph(String msg) throws IOException{
 		writer.write("<p>" + msg + "</p>");
 	}
 	
-	public void link(String href, String caption) throws IOException{
+	protected void link(String href, String caption) throws IOException{
 		paragraph("<a href=\"" + href +"\">" + caption + "</a>");
 	}
 	
-	public void mailto(String mailaddr, String username) throws IOException{
+	protected void mailto(String mailaddr, String username) throws IOException{
 		link("mailto:" + mailaddr, username);
 	}
 	
-	public void close() throws IOException{
+	protected void close() throws IOException{
 		writer.write("</body>\n");
 		writer.write("</html>\n");
 		writer.close();
